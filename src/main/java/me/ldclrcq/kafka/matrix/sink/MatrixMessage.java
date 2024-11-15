@@ -1,7 +1,9 @@
 package me.ldclrcq.kafka.matrix.sink;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.quarkus.runtime.annotations.RegisterForReflection;
 
+@RegisterForReflection
 public record MatrixMessage(
         @JsonProperty("msgtype") String msgType,
         String body,
